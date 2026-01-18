@@ -10,19 +10,32 @@ int main(){
     //2. Criando navios
     int navioH[3] = {3, 3, 3};
     int navioV[3] = {3, 3, 3};
+    int navioDiag1[3] = {3, 3, 3};
+    int navioDiag2[3] = {3, 3, 3};
 
     //3. Coordenadas iniciais
     int linhaH = 2, colunaH = 3;
     int linhaV = 5, colunaV = 6;
+    int diagLinha1 = 6, diagColuna1 = 3;
+    int diagLinha2 = 1, diagColuna2 = 6;
 
-    //4. Posicionando os navios horizontais
+    //4. Posicionando o navio horizontal
     for (int i = 0; i < 3; i++){
         tabuleiro[linhaH][colunaH + i] = navioH[i];
     } 
 
-    //5. Posicionando os navios verticais
+    //5. Posicionando o navio vertical
     for (int i = 0; i < 3; i++){
         tabuleiro[linhaV + i][colunaV] = navioV[i];
+    }
+    //Navioa na diagonal 1
+    for (int i = 0; i < 3; i++) {
+        tabuleiro[diagLinha1 + i][diagColuna1 + i] = navioDiag1[i];
+    }
+
+    //Navioa na diagonal 2
+    for (int i = 0; i < 3; i++) {
+        tabuleiro[diagLinha2 + i][diagColuna2 + i] = navioDiag2[i];
     }
 
     //6. Exibindo o Tabuleiro
