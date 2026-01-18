@@ -1,103 +1,84 @@
-# ⚠️ Importante!!!
-Você pode escolher qualquer um dos desafios para desenvolver. Sinta-se à vontade para começar pelo desafio que mais lhe interessa.
+🛳️ Batalha Naval – Nível Novato (C)
+📌 Descrição do Projeto
 
-# Desafio Batalha Naval - Três Níveis de Complexidade
+Este projeto faz parte do desafio Batalha Naval – Nível Novato, desenvolvido em linguagem C, com o objetivo de praticar o uso de matrizes bidimensionais, vetores, loops aninhados e organização de código.
 
-Bem-vindo ao desafio "Batalha Naval"! Este projeto desafiará suas habilidades de programação utilizando vetores e matrizes para simular um jogo de Batalha Naval, dividido em três níveis: Novato, Aventureiro e Mestre. Em cada nível, novas funcionalidades serão adicionadas, tornando o desafio progressivamente mais complexo.
+Nesta etapa, o foco é representar um tabuleiro 10x10, posicionar dois navios (um horizontal e um vertical) e exibir o resultado no console.
 
-## 🏅 Nível Novato
+🎯 Objetivos do Desafio
 
-Neste nível inicial, você implementará a lógica básica de posicionamento de navios em um tabuleiro de Batalha Naval utilizando vetores bidimensionais.
+Representar um tabuleiro de Batalha Naval usando uma matriz 10x10
 
-### 🚩 Objetivos:
-- **Posicionamento dos Navios:** O sistema deve simular a localização de dois navios no tabuleiro, um posicionado verticalmente e outro horizontalmente.
-- **Utilização de Vetores:** Os navios serão posicionados utilizando vetores bidimensionais, com coordenadas X e Y.
-- **Exibição de Coordenadas:** O sistema deve exibir as coordenadas de cada parte dos navios no console utilizando `printf`.
+Inicializar todas as posições com 0 (água)
 
-### 📥 Entrada de Dados:
-- Os valores serão inseridos manualmente por meio de variáveis no código.
+Posicionar:
 
-### 📤 Saída de Dados:
-- Após o posicionamento, o sistema deve exibir as coordenadas dos navios de forma clara e organizada.
+1 navio horizontal (tamanho 3)
+1 navio vertical (tamanho 3)
+Representar navios com o valor 3
+Garantir que os navios estejam dentro dos limites do tabuleiro
+Exibir o tabuleiro de forma clara e organizada no console
 
----
+🧠 Conceitos Trabalhados
 
-## 🏅 Nível Aventureiro
+Matrizes bidimensionais (int tabuleiro[10][10])
+Vetores unidimensionais
+Laços de repetição (for)
+Indexação de linhas e colunas
+Organização e legibilidade de código
+Impressão formatada no console (printf)
 
-No nível Aventureiro, você expandirá o tabuleiro e adicionará mais navios, incluindo posicionamentos na diagonal.
+🗺️ Estrutura do Tabuleiro
 
-### 🆕 Diferença em relação ao Nível Novato:
-- **Tabuleiro 10x10:** O tabuleiro será expandido para uma matriz 10x10.
-- **Posicionamento de Quatro Navios:** O sistema deverá posicionar quatro navios, incluindo dois na diagonal.
-- **Exibição Completa do Tabuleiro:** O sistema exibirá toda a matriz, onde 0 indica uma posição sem navio e 3 indica uma posição ocupada.
+O tabuleiro possui 10 linhas e 10 colunas
+As linhas são identificadas por números (0 a 9)
+As colunas são identificadas por letras (A a J)
+Valor 0 → Água
+Valor 3 → Parte de navio
 
-### 🚩 Novas Funcionalidades:
-- **Matriz 10x10:** Implementação de uma matriz maior para representar o tabuleiro.
-- **Posicionamento de Navios na Diagonal:** Adição de navios posicionados diagonalmente.
-- **Exibição do Tabuleiro Completo:** O sistema mostrará o tabuleiro completo, indicando as posições ocupadas e livres.
+Exemplo de visualização no console:
 
----
+  ABCDEFGHIJ
+0 0 0 0 0 0 0 0 0 0
+1 0 0 0 0 0 0 0 0 0
+2 0 0 0 3 3 3 0 0 0
+3 0 0 0 0 0 0 0 0 0
+4 0 0 0 0 0 0 0 0 0
+5 0 0 0 0 0 3 0 0 0
+6 0 0 0 0 0 3 0 0 0
+7 0 0 0 0 0 3 0 0 0
+8 0 0 0 0 0 0 0 0 0
+9 0 0 0 0 0 0 0 0 0
 
-## 🏅 Nível Mestre
+⚙️ Como Executar
 
-No nível Mestre, o desafio se intensifica com a implementação de habilidades especiais representadas por matrizes específicas no tabuleiro.
-
-### 🆕 Diferença em relação ao Nível Aventureiro:
-- **Habilidades Especiais:** O sistema deve definir áreas de habilidades utilizando matrizes com padrões específicos: cone, cruz e octaedro.
-- **Estruturas de Repetição Aninhadas:** Utilização de loops aninhados para percorrer e preencher as áreas afetadas pelas habilidades.
-
-### 🚩 Novas Funcionalidades:
-- **Matrizes de Habilidades:** Implementação de três matrizes para representar habilidades especiais no tabuleiro.
-- **Padrões de Habilidade:** Criação de padrões específicos (cone, cruz, octaedro) para definir as áreas afetadas.
-- **Exibição das Áreas Atingidas:** O sistema exibirá o tabuleiro com as áreas afetadas, utilizando 0 para áreas não afetadas e 1 para áreas afetadas.
-
-### Exemplo de Saída:
-
-Exemplo e comando:
-printf("%d ",matriz[i][j]);
-
-### Exemplo de saída de habilidade em cone:
-
-0 0 1 0 0
-
-0 1 1 1 0
-
-1 1 1 1 1
-
-### Exemplo de saída de habilidade em octaedro:
-
-0 0 1 0 0
-
-0 1 1 1 0
-
-0 0 1 0 0
-
-### Exemplo de saída de habilidade em cruz:
-
-0 0 1 0 0
-
-1 1 1 1 1
-
-0 0 1 0 0
+Compile o código com um compilador C (exemplo: gcc):
+gcc batalha_naval.c -o batalha_naval
 
 
+Execute o programa:
+./batalha_naval
 
+📚 Regras e Simplificações
 
+O tamanho do tabuleiro é fixo (10x10)
+O tamanho dos navios é fixo (3 posições)
+As coordenadas iniciais são definidas diretamente no código
+Não há interação com o usuário nesta fase
+Não há lógica de ataque ou vitória
 
----
+🤝 Colaboração com Inteligência Artificial
 
-## 📋 Requisitos Funcionais Comuns
-- **Entrada de Dados:** Os valores serão inseridos manualmente por meio de variáveis no código.
-- **Utilização de Matrizes:** Os dados devem ser estruturados de maneira eficiente utilizando matrizes.
-- **Exibição de Resultados:** Os resultados devem ser exibidos de forma clara e organizada.
+Este projeto contou com apoio de uma Inteligência Artificial (ChatGPT) para:
+Esclarecimento de conceitos de matrizes e loops
+Correção de erros lógicos e sintáticos
+Explicação detalhada da lógica de impressão do tabuleiro
+Apoio na organização e documentação do código
 
-## 📌 Requisitos Não Funcionais Comuns
-- **Performance:** O sistema deve executar operações de forma eficiente, sem atrasos perceptíveis.
-- **Documentação:** O código deve ser bem documentado, com comentários claros sobre a função de cada parte do código.
-- **Manutenibilidade:** O código deve ser organizado e fácil de entender, facilitando futuras manutenções e expansões.
+Todo o código foi analisado, compreendido e ajustado pela autora, sendo a IA utilizada como ferramenta de apoio ao aprendizado, conforme boas práticas acadêmicas.
 
----
+✨ Autoria
 
-Boa sorte no desenvolvimento deste desafio! Aproveite para aprimorar suas habilidades em vetores e matrizes enquanto progride pelos níveis.
-
-Equipe de Ensino - MateCheck
+Edineusa de Jesus Fernandes
+Estudante de Tecnologia da Informação
+Projeto acadêmico – Nível Novato
